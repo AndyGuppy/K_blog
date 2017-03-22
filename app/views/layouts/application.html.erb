@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KryptonicSoft Blog </title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1><%= link_to "Blog", root_path %></h1>
+      <p>Welcome to my Blog, this blog app is parts of a CMS system </p>
+
+      <%= form_tag(search_path, method: :get) do %>
+        <%= text_field_tag 'query', '', placeholder: 'Search' %>
+      <% end %>
+
+      <hr />
+
+
+    </header>
+
+    <section>
+      <%= yield %>
+    </section>
+  </div>
+</body>
+</html>
