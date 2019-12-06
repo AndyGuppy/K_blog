@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'kryptonic_cms', path: '../kryptonic_cms/'
+
 
 # devise
 gem 'devise'
